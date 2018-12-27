@@ -9,8 +9,17 @@ class Bear
     @stomach = []
   end
 
-  def bear_take_fish(shol)
-    @stomach << shol
+  def bear_take_fish(river)
+    river.shol.each {|fish| @stomach << fish }
+    river.shol.clear
   end
+
+  def roar
+    return "Roaarh"
+  end
+
+  def food_count
+    @stomach.count
+  end 
 
 end

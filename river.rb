@@ -3,7 +3,7 @@ class River
   attr_reader :name
   attr_accessor :shol
 
-  def initialize(name,shol = [])
+  def initialize(name, shol =[])
     @name = name
     @shol = shol
   end
@@ -12,10 +12,14 @@ class River
     return @shol.count
   end
 
-  def put_fish_in_river(fish)
-    fish.each {|x| @shol << x}
+  def put_fish_in_river(group_of_fish)
+    group_of_fish.each {|fish| @shol << fish }
   end
 
+
+  def fish_count
+    @shol.count
+  end 
 
 
 
